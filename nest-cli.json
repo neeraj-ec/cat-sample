@@ -1,0 +1,30 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/cat-sample/src",
+  "monorepo": true,
+  "root": "apps/cat-sample",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/cat-sample/tsconfig.app.json"
+  },
+  "projects": {
+    "cat-sample": {
+      "type": "application",
+      "root": "apps/cat-sample",
+      "entryFile": "main",
+      "sourceRoot": "apps/cat-sample/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/cat-sample/tsconfig.app.json"
+      }
+    },
+    "cat-service": {
+      "type": "application",
+      "root": "apps/cat-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/cat-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/cat-service/tsconfig.app.json"
+      }
+    }
+  }
+}
